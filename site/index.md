@@ -3,7 +3,6 @@ layout: home
 hero:
   name: Trend Detect Reports
   text: 每日板块与个股 Markdown 报告
-  tagline: GitHub Pages + VitePress 自动展示
   actions:
     - theme: brand
       text: 查看板块日报
