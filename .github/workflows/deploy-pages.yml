@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SITE_BASE: /${{ github.event.repository.name }}/
+      SITE_BASE: ${{ vars.SITE_BASE != '' && vars.SITE_BASE || format('/{0}/', github.event.repository.name) }}
     steps:
       - uses: actions/checkout@v4
 

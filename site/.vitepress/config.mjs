@@ -1,6 +1,17 @@
 import { industrySidebar, stockSidebar } from "./sidebar.generated.mjs";
 
-const siteBase = process.env.SITE_BASE || "/";
+function normalizeBase(value) {
+  const trimmed = (value || "/").trim();
+  if (!trimmed || trimmed === "/") {
+    return "/";
+  }
+
+  const withoutSpaces = trimmed.replace(/\s+/g, "");
+  const withLeadingSlash = withoutSpaces.startsWith("/") ? withoutSpaces : `/${withoutSpaces}`;
+  return withLeadingSlash.endsWith("/") ? withLeadingSlash : `${withLeadingSlash}/`;
+}
+
+const siteBase = normalizeBase(process.env.SITE_BASE);
 
 export default {
   base: siteBase,
