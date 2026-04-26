@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SITE_BASE: /online_md_stock/
+      SITE_BASE: /
     steps:
       - uses: actions/checkout@v4
 
