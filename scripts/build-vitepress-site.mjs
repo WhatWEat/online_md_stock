@@ -57,7 +57,7 @@ outline: deep
 ---
 
 > 类型：${sectionLabel}
-> 下载原始 Markdown：<a href="${downloadPath}" download target="_blank" rel="noreferrer">点击下载</a>
+> 下载原始 Markdown：<a href="${downloadPath}" download>点击下载</a>
 
 ${sourceContent.trim()}
 `;
@@ -115,7 +115,7 @@ async function collectReports({
     const targetPagePath = path.join(outputDir, `${report.date}.md`);
     const targetDownloadPath = path.join(downloadsDir, `${report.date}.md`);
     const targetDownloadCleanPath = path.join(downloadsDir, report.date);
-    const downloadLink = `${siteBasePrefix}/downloads/${downloadsDirName}/${report.date}.md`;
+    const downloadLink = `../downloads/${downloadsDirName}/${report.date}.md`;
     const sourceContent = await readFile(sourcePath, "utf8");
 
     await copyFile(sourcePath, targetDownloadPath);
