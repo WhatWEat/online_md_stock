@@ -3,19 +3,21 @@ layout: home
 hero:
   name: Trend Detect Reports
   text: 每日板块与个股 Markdown 报告
+  tagline: GitHub Pages + VitePress 自动展示
   actions:
     - theme: brand
       text: 查看板块日报
-      link: /industry/2026-04-24
+      link: /industry/2026-04-27
     - theme: alt
       text: 查看个股日报
-      link: /stocks/2026-04-24
+      link: /stocks/2026-04-27
 ---
 
 ## 板块日报
 
-最新：[`2026-04-24`](/industry/2026-04-24)
+最新：[`2026-04-27`](/industry/2026-04-27)
 
+- [2026-04-27](/industry/2026-04-27)
 - [2026-04-24](/industry/2026-04-24)
 - [2026-04-23](/industry/2026-04-23)
 - [2026-04-22](/industry/2026-04-22)
@@ -25,8 +27,9 @@ hero:
 
 ## 个股日报
 
-最新：[`2026-04-24`](/stocks/2026-04-24)
+最新：[`2026-04-27`](/stocks/2026-04-27)
 
+- [2026-04-27](/stocks/2026-04-27)
 - [2026-04-24](/stocks/2026-04-24)
 - [2026-04-23](/stocks/2026-04-23)
 - [2026-04-22](/stocks/2026-04-22)
