@@ -78,6 +78,14 @@ function buildLatestList(sectionTitle, items) {
   ].join("\n");
 }
 
+function buildSectionIndexPage(sectionTitle, sectionDesc, items) {
+  return `# ${sectionTitle}
+
+${sectionDesc}
+
+${buildLatestList(sectionTitle, items)}`.trim() + "\n";
+}
+
 async function collectReports({
   sourceDir,
   outputDirName,
@@ -195,6 +203,20 @@ ${buildLatestList("个股日报", stockItems)}
   await writeFile(indexPath, content, "utf8");
 }
 
+async function writeSectionIndexPages(industryItems, stockItems) {
+  await writeFile(
+    path.join(siteDir, "industry", "index.md"),
+    buildSectionIndexPage("板块日报", "侧边栏与下方列表按日期从新到旧展示所有板块日报。", industryItems),
+    "utf8"
+  );
+
+  await writeFile(
+    path.join(siteDir, "stocks", "index.md"),
+    buildSectionIndexPage("个股日报", "侧边栏与下方列表按日期从新到旧展示所有个股日报。", stockItems),
+    "utf8"
+  );
+}
+
 async function main() {
   await ensureDir(siteDir);
 
@@ -216,6 +238,7 @@ async function main() {
 
   await writeSidebar(industryItems, stockItems);
   await writeHomePage(industryItems, stockItems);
+  await writeSectionIndexPages(industryItems, stockItems);
 
   console.log("Prepared VitePress content:");
   console.log(`- industry reports: ${industryItems.length}`);
