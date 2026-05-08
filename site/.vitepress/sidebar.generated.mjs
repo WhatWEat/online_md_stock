@@ -4,6 +4,10 @@ export const industrySidebar = [
     "collapsed": false,
     "items": [
       {
+        "text": "2026-05-08",
+        "link": "/industry/2026-05-08"
+      },
+      {
         "text": "2026-05-07",
         "link": "/industry/2026-05-07"
       },
@@ -56,6 +60,10 @@ export const stockSidebar = [
     "text": "个股日报",
     "collapsed": false,
     "items": [
+      {
+        "text": "2026-05-08",
+        "link": "/stocks/2026-05-08"
+      },
       {
         "text": "2026-05-07",
         "link": "/stocks/2026-05-07"
